@@ -1,0 +1,434 @@
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <title>CSS Template</title>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+
+            <style>
+                * {
+                    box-sizing: border-box;
+
+                }
+
+                body {
+                    font-family: Arial, Helvetica, sans-serif;
+                    margin:5px 15px 5px 5px;
+
+                }
+
+                .header {
+                    overflow: hidden;
+                    background-color: #f1f1f1;
+                    padding: 20px 10px;
+                    margin-top: 15px;
+                    width:95%;
+                    float:right;
+                    border-bottom: 1px solid #cccccc;
+                    height: 68px;
+                }
+
+
+                textarea {
+                    overflow: auto;
+                    width: 1150px;
+                    height:50px;
+                    font-size: medium;
+                    padding:14px;
+                    margin: 8px;
+
+                }
+
+
+                .column1{
+                    float: left;
+                    padding: 10px;
+
+                }
+                .div1 {
+                    width: 74px;
+                    height:70px;
+                    background-color: crimson;
+                    border-bottom: 1px solid #cccccc;
+
+                }
+
+                .img1{
+                   margin-left: auto ;
+                   margin-right: auto ;
+                   padding:10px;
+               }
+                .div2 {
+                    width: 74px;
+                    height: 894px;
+                    margin-top: -3px;
+                    background-color: black;
+
+                }
+                h2{
+                    margin: 0px 0;
+                    font-weight: normal;
+                    font-family: "Times New Roman", Times, serif ;
+                    width: 750px;
+                }
+
+
+                .column {
+                    float: left;
+                }
+
+                .column.side {
+                    width: 25%;
+                    height: 893px;
+                    border-right:1px solid #cccccc;
+                    padding:2px;
+
+
+                }
+                .div8{
+
+                    border-bottom: 1px solid #cccccc;
+                    width: 800px;
+
+                    padding: 10px;
+
+                }
+                p{
+                    padding: 10px;
+
+                }
+
+                .column.middle {
+                    width: 70%;
+                    height: 816px;
+                    padding: 10px;
+
+                }
+                .column1.small{
+                    width: 5%;
+                    height: 970px;
+                    margin-top: 5px;
+
+                }
+                .row:after {
+                    content: "";
+                    display: table;
+                    clear: both;
+                }
+                .fake{
+                    background-color: #aaa;
+                    width: 55%;
+                    padding: 20px;
+                    margin-left: auto ;
+                    margin-right: auto ;
+                }
+                .material-icons {
+
+                    font-size: 12px;
+
+                }
+                .span3{
+                    font-style: italic;
+                    color: black;
+                    margin-left: -1px;
+                }
+                h3{
+                    height: 6px;
+
+                 }
+
+                table {
+                    display: table;
+                    border-collapse: separate;
+                    border-color: grey;
+                }
+                span{
+                    margin-left: 23px;
+                    color:white;
+                }
+                .span img {
+                    margin-left: auto ;
+                    margin-right: auto ;
+                }
+                .span small {
+                    color: white;
+                }
+                .footer {
+                    background-color: white;
+                    padding: 10px;
+                    text-align: center;
+                    width:70%;
+                    float:right;
+                    height: 77px;
+                    border-top: 1px solid #cccccc ;
+
+
+                }
+                td{
+                    border-bottom: 1px solid #cccccc;
+                    text-align: justify;
+                    padding: 4px;
+                }
+                h4{
+                    height: 6px;
+                    margin-top: 0px;
+
+                }
+                .span1{
+                    margin-left: auto ;
+                    margin-right: auto ;
+                    padding: 400px;
+                     color:black;
+                    font-style: italic;
+                }
+
+                .fakeimg {
+                    background-color: white;
+                    width: 5px;
+                    height:5px;
+                    border-radius: 5px;
+                    margin-left: auto ;
+                    margin-right: auto ;
+                    padding-top: 27px;
+                    padding-right: 19px;
+                    padding-bottom: 25px;
+                    padding-left: 29px;
+                }
+                a
+                {
+                    text-decoration: none;
+                    color: #232323;
+
+                    transition: color 0.3s ease;
+                }
+
+                a:hover
+                {
+                    color: tomato;
+                }
+
+                #menuToggle
+                {
+                    display: block;
+                    position: relative;
+                    top: -16px;
+                    left: -11px;
+                    z-index: 1;
+
+                    -webkit-user-select: none;
+                    user-select: none;
+                }
+
+                #menuToggle input
+                {
+                    display: block;
+                    width: 40px;
+                    height: 32px;
+                    position: absolute;
+                    top: -7px;
+                    left: -5px;
+
+                    cursor: pointer;
+
+                    opacity: 0; /* hide this */
+                    z-index: 2; /* and place it over the hamburger */
+
+                    -webkit-touch-callout: none;
+                }
+
+                /*
+                 * Just a quick hamburger
+                 */
+                #menuToggle span
+                {
+                    display: block;
+                    width: 33px;
+                    height: 4px;
+                    margin-bottom: 5px;
+                    position: relative;
+
+                    background: black;
+                    border-radius: 3px;
+
+                    z-index: 1;
+
+                    transform-origin: 4px 0px;
+
+                    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                    opacity 0.55s ease;
+                }
+
+                #menuToggle span:first-child
+                {
+                    transform-origin: 0% 0%;
+                }
+
+                #menuToggle span:nth-last-child(2)
+                {
+                    transform-origin: 0% 100%;
+                }
+
+
+                #menuToggle input:checked ~ span
+                {
+                    opacity: 1;
+                    transform: rotate(45deg) translate(-2px, -1px);
+                    background: #232323;
+                }
+
+
+                #menuToggle input:checked ~ span:nth-last-child(3)
+                {
+                    opacity: 0;
+                    transform: rotate(0deg) scale(0.2, 0.2);
+                }
+
+
+                #menuToggle input:checked ~ span:nth-last-child(2)
+                {
+                    transform: rotate(-45deg) translate(0, -1px);
+                }
+
+
+                #menu li
+                {
+                    padding: 10px 0;
+                    font-size: 22px;
+                }
+
+                /*
+                 * And let's slide it in from the left
+                 */
+                #menuToggle input:checked ~ ul
+                {
+                    transform: none;
+                }
+                nav{
+                    float: right;
+                    margin-top: -9px;
+                }
+                i{
+                    font-style: normal;
+                }
+            </style>
+        </head>
+        <body>
+
+
+        <div class="header">
+            <h2>What Is Lorem Ipsum?</h2>
+            <nav role="navigation">
+                <div id="menuToggle">
+
+                    <input type="checkbox" />
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </div>
+            </nav>
+
+        </div>
+
+        <div class="column1 small">
+            <div class="div1">
+            <img src="logo.png" width="70px" height="70px"class="img1">
+            </a>
+            </div>
+            <div class="div2">
+                <br>
+            <div class="fakeimg"></div>
+                <span>
+        <i>&#x2318;</i>
+              <small>1</small>
+        </span>
+        <br>
+                <br>
+
+            <div class="fakeimg" ></div>
+                <span>
+        <i>&#x2318;</i>
+              <small>2</small>
+        </span>
+                <br>
+                <br>
+
+            <div class="fakeimg" ></div>
+                <span>
+        <i>&#x2318;</i>
+              <small>3</small>
+        </span>
+                <br>
+                <br>
+
+            <div class="fakeimg" ></div>
+                <span>
+        <i>&#x2318;</i>
+              <small>4</small>
+        </span>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="column side" style="background-color:#f1f1f1;">
+                <table style="width:410px;height:60%;">
+                    <tr>
+                        <td style="width:100px"><h4>What Is Lorem Ipsum?</h4>unt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. </td>
+                    </tr>
+
+                    <tr>
+                        <td style="width:100px"><h4>What Is Lorem Ipsum?</h4>unt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamc.</td>
+                    </tr>
+                    <tr>
+                        <td style="width:100px"><h4>What Is Lorem Ipsum?</h4>unt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</td>
+                    </tr>
+
+                    <tr>
+                        <td style="width:100px"><h4>What Is Lorem Ipsum?</h4>unt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitatio.</td>
+                    </tr>
+                    <tr>
+                        <td style="width:100px"><h4>What Is Lorem Ipsum?</h4>unt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitati.</td>
+                    </tr>
+
+                    <tr>
+                        <td style="width:100px"><h4>What Is Lorem Ipsum?</h4>unt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</td>
+                    </tr>
+                    <tr>
+                        <td style="width:100px"><h4>What Is Lorem Ipsum?</h4>unt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitati.</td>
+                    </tr>
+
+                    <tr>
+                        <td style="width:100px"><h4>What Is Lorem Ipsum?</h4>unt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</td>
+                    </tr>
+
+
+                </table>
+
+            </div>
+            <div class="column middle" style="background-color:white;">
+                <div class="div8">
+                <h3>All the Lorem Ipsum generators on the Internet. </h3>
+                    <span class="span3">Sunt in culpa qui officia deserunt mollit anim. </span>
+                </div>
+
+
+                <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                <br>
+
+                <div class="fake" style="height:220px;">
+
+                </div>
+                <span class="span1">Sunt in culpa qui officia deserunt mollit anim. </span>
+                <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.unt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididuntmply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+            <div class="footer"><textarea rows="2" cols="30" placeholder="Type A Message ..."></textarea>
+            </div>
+        </div>
+        </body>
+        </html>
